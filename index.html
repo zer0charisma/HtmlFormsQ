@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Front-end foundations: HTML forms</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <main>
+      <form>
+          <legend>What's Updog?</legend>
+          <fieldset>
+            <div> 
+              <label for="name">Yer Name:</label>
+              <input 
+                id="name" 
+                type="text" 
+                name="name" 
+                placeholder="Who art thou?"/>
+            </div>
+            <div>
+              <label for="email">Best Email:</label>
+              <input
+                id="email"
+                type="text"
+                name="email"
+                autofocus="on"
+                required
+              />
+          </div>
+          <div>
+            <label for="phone">Phone #:</label>
+            <input
+              id="phone"
+              type="text"
+              name="phone"
+              pattern="\d{3}[\-]\d{3}[\-]\d{4}"
+              placeholder="xxx-xxx-xxxx"
+            />
+          </div>
+        <div>
+          <label for="form-message">Your message:</label>
+          <textarea
+            id="form-message"
+            name="message"
+            autofocus="on"
+            required
+            maxlength="200"
+            placeholder="How can I help you?"
+          ></textarea>
+        </div>
+        <div>
+          <label for="password">Password:</label>
+          <input id="password" type="password" name="password" minlength="8"/>
+        </div>
+      </fieldset>
+        <div>
+          
+          <h3>Favorite Color:</h3>
+          <div>
+            <input id="pink" name="color" type="radio" value="pink" />
+            <label for="pink">Pink</label>
+          </div>
+          <div>
+            <input id="blue" name="color" type="radio" value="blue" />
+            <label for="blue">Blue</label>
+          </div>
+          <div>
+            <input id="white" name="color" type="radio" value="white" />
+            <label for="white">White</label>
+          </div>
+        </div>
+        <div>
+          <h3>What's your favorite candy type?</h3>
+          <div>
+            <input name="chocolate" type="checkbox" id="chocolate" />
+            <label for="chocolate">Chocolate</label>
+          </div>
+          <div>
+            <input name="compressed powder" type="checkbox" id="compressed powder" />
+            <label for="compressed powder">Crunchy Compressed Powders</label>
+          </div>
+          <div>
+            <input name="fruity" type="checkbox" id="fruity" />
+            <label for="fruity">Fruity</label>
+          </div>
+        </div>
+        <div>
+          <h3>Choose a font:</h3>
+          <select name="fonts" size="1">
+            <option value="arial">Arial</option>
+            <option value="times">Times New Roman</option>
+            <option value="comicsans">Comic Sans</option>
+            <option value="papyrus">Papyrus</option>
+          </select>
+        </div>
+        <hr>
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+      </form>
+    </main>
+  </body>
+</html>
